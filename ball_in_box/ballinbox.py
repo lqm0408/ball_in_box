@@ -4,6 +4,7 @@ from .validate import validate
 
 __all__ = ['ball_in_box']
 
+#判断随机点是否在圆外
 def is_correct (x,y,circles):
     if circles is None:
         return True
@@ -14,6 +15,7 @@ def is_correct (x,y,circles):
             else:
                 return False
 
+#计算以随机点为圆心的最大半径
 def max_r (x,y,circles):
     a = math.sqrt((x-0.5)**2 + (y-0.5)**2)
     b = math.sqrt((x-0.5)**2 + (y+0.5)**2)
@@ -33,7 +35,8 @@ def max_r (x,y,circles):
     else:
         max_r = min(a,b,c) 
     return max_r
-	
+
+#获取五个圆
 def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
     """
     m is the number circles.
