@@ -6,7 +6,7 @@ __all__ = ['ball_in_box']
 
 def is_correct (x,y,circles):
     if circles is None:
-	    return True
+        return True
     else:
         for circle in circles:
             if math.sqrt((x-circle[0])**2 + (y-circle[1])**2) > circle[2]:
@@ -31,7 +31,7 @@ def max_r (x,y,circles):
 	
         max_r = min(a,b,c,p)
     else:
-	    max_r = min(a,b,c) 
+        max_r = min(a,b,c) 
     return max_r
 	
 def ball_in_box(m=5, blockers=[(0.5, 0.5), (0.5, -0.5), (0.5, 0.3)]):
