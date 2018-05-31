@@ -25,8 +25,8 @@ def max_r (x,y,circles):
         d_s = []
 
         for circle in circles:
-	        d = math.sqrt((x-circle[0])**2 + (y-circle[1])**2) - circle[2]
-        	d_s.append(d)
+            d = math.sqrt((x-circle[0])**2 + (y-circle[1])**2) - circle[2]
+            d_s.append(d)
 		
         for dx in d_s:
             p = min(dx,p)
